@@ -1,0 +1,46 @@
+{
+	"name" : "jon48/webtrees-mod-maj-geodata-france",
+	"description" : "MyArtJaub Geographical data Module for webtrees - France",
+	"type" : "webtrees-module",
+	"keywords" : [
+		"webtrees",
+		"genealogy",
+		"webtrees-module"
+	],
+	"homepage" : "https://github.com/jon48/webtrees-mod-maj-geodata-france",
+	"license" : "GPL-3.0-or-later",
+	"authors" : [{
+			"name" : "Jonathan Jaubart",
+			"email" : "dev@jaubart.com",
+			"homepage" : "http://www.jaubart.com",
+			"role" : "Developer"
+		}
+	],
+	"support" : {
+		"issues" : "https://github.com/jon48/webtrees-mod-maj-geodata-france/issues"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"MyArtJaub\\Webtrees\\Module\\GeoData\\France\\" : "app"
+		}
+	},
+	"require" : {
+		"jon48/webtrees-lib" : "dev-feature/2.1-geodispersion-dev",
+		"fisharebest/webtrees" : "dev-main",
+		"league/flysystem" : "~2.0"
+	},
+	"require-dev" : {
+		"phpstan/phpstan-deprecation-rules" : "^0.12.6",
+		"phpstan/phpstan-phpunit" : "^0.12.17",
+		"phpstan/phpstan-strict-rules" : "^0.12.9"
+	},
+	"scripts" : {
+		"webtrees-mod-maj-geodata-france:phpcs" : "phpcs -s",
+		"webtrees-mod-maj-geodata-france:phpcbf" : "phpcbf",
+		"webtrees-mod-maj-geodata-france:phpstan" : "phpstan analyze",
+		"webtrees-mod-maj-geodata-france:psalm" : "psalm"
+	},
+	"extra" : {
+		"installer-name" : "myartjaub_geodata_france"
+	}
+}
