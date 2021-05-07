@@ -1,4 +1,4 @@
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jon48/webtrees-mod-maj-geodata-france/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jon48/webtrees-mod-maj-geodata-france/?branch=main)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jon48/webtrees-mod-maj-geodata-france/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/jon48/webtrees-mod-maj-geodata-france/?branch=main)
 [![Code Climate](https://codeclimate.com/github/jon48/webtrees-mod-maj-geodata-france/badges/gpa.svg)](https://codeclimate.com/github/jon48/webtrees-mod-maj-geodata-france)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/)

@@ -1,0 +1,11 @@
+filter:
+   paths: ['app/*', 'resources/*', 'module.php']
+   dependency_paths:
+      - app/Maps/
+   excluded_paths:
+      - resources/mappings/
+coding_style:
+   php:
+      indentation:
+         general:
+            size: 4
