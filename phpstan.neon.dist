@@ -5,4 +5,5 @@ parameters:
       - module.php
       - app
       - resources
+      - tests
    ignoreErrors:

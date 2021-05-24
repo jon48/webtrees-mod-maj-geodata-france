@@ -5,6 +5,7 @@
     <file>module.php</file>
     <file>app</file>
 	<file>resources</file>
+    <file>tests</file>
 
     <arg name="extensions" value="php,phtml"/>
     <arg name="colors"/>

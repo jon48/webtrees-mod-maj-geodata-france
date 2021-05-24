@@ -24,15 +24,21 @@
 			"MyArtJaub\\Webtrees\\Module\\GeoData\\France\\" : "app"
 		}
 	},
+    "autoload-dev": {
+        "files" : [
+            "vendor/fisharebest/webtrees/tests/TestCase.php"
+        ]
+    },
 	"require" : {
-		"jon48/webtrees-lib" : "dev-feature/2.1-geodispersion-dev",
+		"jon48/webtrees-lib" : "dev-main",
 		"fisharebest/webtrees" : "dev-main",
 		"league/flysystem" : "~2.0"
 	},
 	"require-dev" : {
 		"phpstan/phpstan-deprecation-rules" : "^0.12.6",
 		"phpstan/phpstan-phpunit" : "^0.12.17",
-		"phpstan/phpstan-strict-rules" : "^0.12.9"
+		"phpstan/phpstan-strict-rules" : "^0.12.9",
+		"phpunit/phpunit": "@stable"
 	},
 	"scripts" : {
 		"webtrees-mod-maj-geodata-france:phpcs" : "phpcs -s",

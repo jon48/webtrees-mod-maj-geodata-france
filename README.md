@@ -1,5 +1,6 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jon48/webtrees-mod-maj-geodata-france/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/jon48/webtrees-mod-maj-geodata-france/?branch=main)
 [![Code Climate](https://codeclimate.com/github/jon48/webtrees-mod-maj-geodata-france/badges/gpa.svg)](https://codeclimate.com/github/jon48/webtrees-mod-maj-geodata-france)
+[![codecov](https://codecov.io/gh/jon48/webtrees-mod-maj-geodata-france/branch/main/graph/badge.svg?token=B65SXNYIWI)](https://codecov.io/gh/jon48/webtrees-mod-maj-geodata-france)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
 [![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)
@@ -111,7 +112,7 @@ Data in shapefile format provided by Ciril Group describing the postal codes are
 **License**: [Open Database License](http://opendatacommons.org/licenses/odbl/1.0/)  
 
 
-- [COG - Code officiel géographique](https://www.insee.fr/fr/information/2560452) - INSEE - February 23, 2021
+- [COG - Code officiel géographique](https://www.insee.fr/fr/information/2560452) - INSEE - February 23, 2021  
 Dataset provided by the INSEE (Institut National de la Statistique et des Études Économiques) describing the list of 
 French territorial authorities (*régions*, *départements*, *arrondissements*, *cantons*, *communes*).  
 Data in CSV or plain text format updated annually  

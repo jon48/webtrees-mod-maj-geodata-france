@@ -4,6 +4,9 @@
 /tmp/
 /vendor/
 
+/tests/*.xml
+/tests/coverage
+
 /.project
 /.settings
 
@@ -21,6 +24,9 @@
 *.code-workspace
 
 # Utilities configuration files
-/phpunit.xml
+/phpcs.xml
 /phpdoc.xml
+/phpstan.neon
+/phpunit.xml
 /pdepend.xml
+/.phpunit.result.cache

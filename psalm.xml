@@ -10,6 +10,7 @@
     <projectFiles>
         <directory name="app" />
 		<directory name="resources" />
+        <directory name="tests" />
 		<ignoreFiles>
 			<directory name="vendor" />
 		  </ignoreFiles>
@@ -22,5 +23,10 @@
 	
    <issueHandlers>
       <TooManyTemplateParams errorLevel="info" />
+      <PropertyNotSetInConstructor>
+        <errorLevel type="suppress">
+            <directory name="tests" />
+        </errorLevel>
+      </PropertyNotSetInConstructor>
    </issueHandlers>
 </psalm>
