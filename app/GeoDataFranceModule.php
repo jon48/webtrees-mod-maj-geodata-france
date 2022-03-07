@@ -84,50 +84,48 @@ class GeoDataFranceModule extends AbstractModule implements
         $filesystem = new Filesystem(new LocalFilesystemAdapter($this->resourcesFolder() . 'maps/'));
 
         //phpcs:disable Generic.Files.LineLength.TooLong
-        return array_merge(
-            [
-                new SimpleFilesystemMap(
-                    'fr-metropole-regions-2016',
-                    I18N::translate('Metropolitan France by region') . ' (2016-)',
-                    $filesystem,
-                    'metropole-regions-2016.geojson'
-                ),
-                new SimpleFilesystemMap(
-                    'fr-metropole-regions-1970',
-                    I18N::translate('Metropolitan France by region') . ' (1970-2015)',
-                    $filesystem,
-                    'metropole-regions-1970.geojson'
-                ),
-                new SimpleFilesystemMap(
-                    'fr-metropole-departements',
-                    I18N::translate('Metropolitan France by department'),
-                    $filesystem,
-                    'metropole-departements.geojson'
-                ),
-                new SimpleFilesystemMap(
-                    'fr-area-aubrac-lot-margeride-planeze-communes',
-                    I18N::translate('%s by municipality', 'Aubrac-Margeride-Planèze-Vallée du Lot') . ' - ' . I18N::translate('Latest'),
-                    $filesystem,
-                    'areas/aubrac-lot-margeride-planeze/communes-latest.geojson'
-                ),
-                new SimpleFilesystemMap(
-                    'fr-area-aubrac-lot-margeride-planeze-communes-2011',
-                    I18N::translate('%s by municipality', 'Aubrac-Margeride-Planèze-Vallée du Lot') . ' - 2011',
-                    $filesystem,
-                    'areas/aubrac-lot-margeride-planeze/communes-2011.geojson'
-                ),
-                new SimpleFilesystemMap(
-                    'fr-area-aubrac-lot-margeride-planeze-codespostaux',
-                    I18N::translate('%s by zip code', 'Aubrac-Margeride-Planèze-Vallée du Lot') . ' - ' . I18N::translate('Latest'),
-                    $filesystem,
-                    'areas/aubrac-lot-margeride-planeze/codespostaux-latest.geojson'
-                )
-            ],
-            FranceCommunesLatest::listMapDefinition($filesystem),
-            FranceCommunes2011::listMapDefinition($filesystem),
-            FranceCodePostauxLatest::listMapDefinition($filesystem),
-            FranceArrondMunicipaux::listMapDefinition($filesystem)
-        );
+        return [
+            new SimpleFilesystemMap(
+                'fr-metropole-regions-2016',
+                I18N::translate('Metropolitan France by region') . ' (2016-)',
+                $filesystem,
+                'metropole-regions-2016.geojson'
+            ),
+            new SimpleFilesystemMap(
+                'fr-metropole-regions-1970',
+                I18N::translate('Metropolitan France by region') . ' (1970-2015)',
+                $filesystem,
+                'metropole-regions-1970.geojson'
+            ),
+            new SimpleFilesystemMap(
+                'fr-metropole-departements',
+                I18N::translate('Metropolitan France by department'),
+                $filesystem,
+                'metropole-departements.geojson'
+            ),
+            new SimpleFilesystemMap(
+                'fr-area-aubrac-lot-margeride-planeze-communes',
+                I18N::translate('%s by municipality', 'Aubrac-Margeride-Planèze-Vallée du Lot') . ' - ' . I18N::translate('Latest'),
+                $filesystem,
+                'areas/aubrac-lot-margeride-planeze/communes-latest.geojson'
+            ),
+            new SimpleFilesystemMap(
+                'fr-area-aubrac-lot-margeride-planeze-communes-2011',
+                I18N::translate('%s by municipality', 'Aubrac-Margeride-Planèze-Vallée du Lot') . ' - 2011',
+                $filesystem,
+                'areas/aubrac-lot-margeride-planeze/communes-2011.geojson'
+            ),
+            new SimpleFilesystemMap(
+                'fr-area-aubrac-lot-margeride-planeze-codespostaux',
+                I18N::translate('%s by zip code', 'Aubrac-Margeride-Planèze-Vallée du Lot') . ' - ' . I18N::translate('Latest'),
+                $filesystem,
+                'areas/aubrac-lot-margeride-planeze/codespostaux-latest.geojson'
+            ),
+            ...FranceCommunesLatest::listMapDefinition($filesystem),
+            ...FranceCommunes2011::listMapDefinition($filesystem),
+            ...FranceCodePostauxLatest::listMapDefinition($filesystem),
+            ...FranceArrondMunicipaux::listMapDefinition($filesystem)
+        ];
         //phpcs:enable
     }
 

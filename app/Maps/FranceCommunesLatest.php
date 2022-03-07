@@ -28,7 +28,7 @@ class FranceCommunesLatest
      * List map definitions provided by the module as an array
      *
      * @param FilesystemOperator $filesystem
-     * @return array<\MyArtJaub\Webtrees\Contracts\GeoDispersion\MapDefinitionInterface>
+     * @return array<int, \MyArtJaub\Webtrees\Contracts\GeoDispersion\MapDefinitionInterface>
      */
     public static function listMapDefinition(FilesystemOperator $filesystem): array
     {

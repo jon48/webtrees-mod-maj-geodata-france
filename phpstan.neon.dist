@@ -6,4 +6,5 @@ parameters:
       - app
       - resources
       - tests
+   checkExplicitMixed: false
    ignoreErrors:

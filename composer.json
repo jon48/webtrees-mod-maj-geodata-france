@@ -19,6 +19,11 @@
 	"support" : {
 		"issues" : "https://github.com/jon48/webtrees-mod-maj-geodata-france/issues"
 	},
+	"config": {
+		"allow-plugins": {
+			"composer/package-versions-deprecated": true
+		}
+	},
 	"autoload" : {
 		"psr-4" : {
 			"MyArtJaub\\Webtrees\\Module\\GeoData\\France\\" : "app"
@@ -30,14 +35,14 @@
         ]
     },
 	"require" : {
-		"jon48/webtrees-lib" : "dev-main",
-		"fisharebest/webtrees" : "dev-main",
+		"jon48/webtrees-lib" : "dev-feature/2.1-dev",
+		"fisharebest/webtrees" : "2.1.0-alpha.1",
 		"league/flysystem" : "~2.0"
 	},
 	"require-dev" : {
-		"phpstan/phpstan-deprecation-rules" : "^0.12.6",
-		"phpstan/phpstan-phpunit" : "^0.12.17",
-		"phpstan/phpstan-strict-rules" : "^0.12.9",
+		"phpstan/phpstan-deprecation-rules" : "^1.0",
+		"phpstan/phpstan-phpunit" : "^1.0",
+		"phpstan/phpstan-strict-rules" : "^1.0",
 		"phpunit/phpunit": "@stable"
 	},
 	"scripts" : {
