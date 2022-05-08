@@ -9,3 +9,6 @@ coding_style:
       indentation:
          general:
             size: 4
+build:
+   environment:
+      php: 8.0

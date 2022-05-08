@@ -2091,12 +2091,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jon48/webtrees-lib.git",
-                "reference": "195893df56530960667f3b58ae6e32ed8cc400a9"
+                "reference": "a2ce2d5a4d43037ce96361be2d71dba523256646"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jon48/webtrees-lib/zipball/195893df56530960667f3b58ae6e32ed8cc400a9",
-                "reference": "195893df56530960667f3b58ae6e32ed8cc400a9",
+                "url": "https://api.github.com/repos/jon48/webtrees-lib/zipball/a2ce2d5a4d43037ce96361be2d71dba523256646",
+                "reference": "a2ce2d5a4d43037ce96361be2d71dba523256646",
                 "shasum": ""
             },
             "require": {
@@ -2160,9 +2160,9 @@
             ],
             "support": {
                 "issues": "http://bugs.jaubart.com",
-                "source": "https://github.com/jon48/webtrees-lib/tree/feature/2.1"
+                "source": "https://github.com/jon48/webtrees-lib/tree/feature/code-analysis"
             },
-            "time": "2022-05-08T13:34:13+00:00"
+            "time": "2022-05-08T14:50:10+00:00"
         },
         {
             "name": "league/commonmark",
