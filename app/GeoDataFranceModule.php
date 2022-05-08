@@ -6,7 +6,7 @@
  * @package MyArtJaub\Webtrees\Module\GeoData
  * @subpackage France
  * @author Jonathan Jaubart <dev@jaubart.com>
- * @copyright Copyright (c) 2021, Jonathan Jaubart
+ * @copyright Copyright (c) 2021-2022, Jonathan Jaubart
  * @license https://www.gnu.org/licenses/gpl.html GNU General Public License, version 3
  */
 
@@ -63,7 +63,7 @@ class GeoDataFranceModule extends AbstractModule implements
      */
     public function customModuleVersion(): string
     {
-        return '2.1.0-v.1';
+        return '2.1.1-v.1';
     }
 
     /**

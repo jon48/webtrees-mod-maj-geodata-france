@@ -6,7 +6,7 @@
  * @package MyArtJaub\Webtrees\Module\GeoData
  * @subpackage France
  * @author Jonathan Jaubart <dev@jaubart.com>
- * @copyright Copyright (c) 2021, Jonathan Jaubart
+ * @copyright Copyright (c) 2021-2022, Jonathan Jaubart
  * @license https://creativecommons.org/licenses/by-sa/4.0/legalcode CC-BY-SA-4.0
  */
 

@@ -20,6 +20,12 @@
 		"issues" : "https://github.com/jon48/webtrees-mod-maj-geodata-france/issues"
 	},
 	"config": {
+		"platform" : {
+			"php" : "7.4"
+		},
+		"preferred-install": {
+            "fisharebest/webtrees": "source"
+        },
 		"allow-plugins": {
 			"composer/package-versions-deprecated": true
 		}
@@ -35,8 +41,8 @@
         ]
     },
 	"require" : {
-		"jon48/webtrees-lib" : "dev-feature/2.1-dev",
-		"fisharebest/webtrees" : "2.1.0-alpha.1",
+		"jon48/webtrees-lib" : "dev-main",
+		"fisharebest/webtrees" : "~2.1.1",
 		"league/flysystem" : "~2.0"
 	},
 	"require-dev" : {
