@@ -25,7 +25,7 @@ jobs:
                extensions: gd,intl,mbstring,sqlite,zip
                coverage: pcov
                
-         - uses: actions/checkout@v2
+         - uses: actions/checkout@v3
          
          - run: composer validate
 
@@ -33,7 +33,7 @@ jobs:
          
          - run: vendor/bin/phpunit --coverage-clover=tests/coverage.xml
 
-         - uses: codecov/codecov-action@v1
+         - uses: codecov/codecov-action@v3
            with:
-              token: ${{ secrets.CODECOV_TOKEN }}
               file: tests/coverage.xml
+              flags: unittests
