@@ -41,8 +41,8 @@
         ]
     },
 	"require" : {
-		"jon48/webtrees-lib" : "dev-main",
-		"fisharebest/webtrees" : "~2.1.1",
+		"jon48/webtrees-lib" : "dev-main-2.1 as dev-main",
+		"fisharebest/webtrees" : "~2.1.8",
 		"league/flysystem" : "~2.0"
 	},
 	"require-dev" : {
