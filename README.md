@@ -21,8 +21,8 @@ Geographical data for use in MyArtJaub modules, for the France perimeter.
 ### License
 
 * **webtrees-mod-maj-geodata-france: MyArtJaub Geographical Data for France Module for webtrees**
-* Copyright (C) 2021-2022 Jonathan Jaubart.
-* Derived from **webtrees** - Copyright (C) 2010 to 2022  webtrees development team.
+* Copyright (C) 2021 to 2023 Jonathan Jaubart.
+* Derived from **webtrees** - Copyright (C) 2010 to 2023  webtrees development team.
 * Derived from PhpGedView - Copyright (C) 2002 to 2010  PGV Development Team.
 
 This repository is licensed differently for the software components and the data ones. Indications of the appropriate 
