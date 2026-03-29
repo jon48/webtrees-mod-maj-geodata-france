@@ -97,62 +97,41 @@ class SimpleFrancePlaceMapper implements PlaceMapperInterface
      */
     private array $data = [];
 
-    /**
-     * {@inheritDoc}
-     * @see \MyArtJaub\Webtrees\Contracts\GeoDispersion\PlaceMapperInterface::title()
-     */
+    #[\Override]
     public function title(): string
     {
         return I18N::translate('Mapping on place name, with known variations in France');
     }
 
-    /**
-     * {@inheritDoc}
-     * @see \MyArtJaub\Webtrees\Contracts\GeoDispersion\PlaceMapperInterface::data()
-     */
+    #[\Override]
     public function data(string $key)
     {
         return $this->data[$key] ?? null;
     }
 
-    /**
-     * {@inheritDoc}
-     * @see \MyArtJaub\Webtrees\Contracts\GeoDispersion\PlaceMapperInterface::setData()
-     */
+    #[\Override]
     public function setData(string $key, $data): void
     {
         $this->data[$key] = $data;
     }
 
-    /**
-     * {@inheritDoc}
-     * @see \MyArtJaub\Webtrees\Contracts\GeoDispersion\PlaceMapperInterface::boot()
-     */
+    #[\Override]
     public function boot(): void
     {
     }
 
-    /**
-     * {@inheritDoc}
-     * @see \MyArtJaub\Webtrees\Contracts\GeoDispersion\PlaceMapperInterface::config()
-     */
+    #[\Override]
     public function config(): PlaceMapperConfigInterface
     {
         return new NullPlaceMapperConfig();
     }
 
-    /**
-     * {@inheritDoc}
-     * @see \MyArtJaub\Webtrees\Contracts\GeoDispersion\PlaceMapperInterface::setConfig()
-     */
+    #[\Override]
     public function setConfig(PlaceMapperConfigInterface $config): void
     {
     }
 
-    /**
-     * {@inheritDoc}
-     * @see \MyArtJaub\Webtrees\Contracts\GeoDispersion\PlaceMapperInterface::map()
-     */
+    #[\Override]
     public function map(Place $place, string $feature_property): ?string
     {
         $map_def = $this->data('map');
@@ -204,11 +183,15 @@ class SimpleFrancePlaceMapper implements PlaceMapperInterface
         }
 
         if ($this->endsWith($map_id, '-communes')) {
-            $module = app(ModuleService::class)->findByInterface(GeoDataFranceModule::class)->first();
+            $module_service = app(ModuleService::class);
+            assert($module_service instanceof ModuleService);
+
+            $module = $module_service->findByInterface(GeoDataFranceModule::class)->first();
             if ($module === null) {
                 return $mapping;
             }
 
+            assert($module instanceof GeoDataFranceModule);
             $file = $module->resourcesFolder() . '/mappings/new-communes.php';
             if (!is_file($file)) {
                 return $mapping;

@@ -39,46 +39,31 @@ class GeoDataFranceModule extends AbstractModule implements
 {
     use ModuleMyArtJaubTrait;
 
-    /**
-     * {@inheritDoc}
-     * @see \Fisharebest\Webtrees\Module\AbstractModule::title()
-     */
+    #[\Override]
     public function title(): string
     {
         return I18N::translate('Geographical data - France');
     }
 
-    /**
-     * {@inheritDoc}
-     * @see \Fisharebest\Webtrees\Module\AbstractModule::description()
-     */
+    #[\Override]
     public function description(): string
     {
         return I18N::translate('Data to be used in geographical data analysis - France');
     }
 
-    /**
-     * {@inheritDoc}
-     * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleVersion()
-     */
+    #[\Override]
     public function customModuleVersion(): string
     {
-        return '2.1.1-v.1';
+        return '2.1.1-v.2';
     }
 
-    /**
-     * {@inheritDoc}
-     * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleSupportUrl()
-     */
+    #[\Override]
     public function customModuleSupportUrl(): string
     {
         return 'https://github.com/jon48/webtrees-mod-maj-geodata-france';
     }
 
-    /**
-     * {@inheritDoc}
-     * @see \MyArtJaub\Webtrees\Contracts\GeoDispersion\ModuleMapDefinitionProviderInterface::listMapDefinition()
-     */
+    #[\Override]
     public function listMapDefinition(): array
     {
         $filesystem = new Filesystem(new LocalFilesystemAdapter($this->resourcesFolder() . 'maps/'));
@@ -129,10 +114,7 @@ class GeoDataFranceModule extends AbstractModule implements
         //phpcs:enable
     }
 
-    /**
-     * {@inheritDoc}
-     * @see \MyArtJaub\Webtrees\Contracts\GeoDispersion\ModulePlaceMapperProviderInterface::listPlaceMappers()
-     */
+    #[\Override]
     public function listPlaceMappers(): array
     {
         return [

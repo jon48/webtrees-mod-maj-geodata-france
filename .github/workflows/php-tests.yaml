@@ -13,27 +13,38 @@ jobs:
 
       strategy:
          matrix:
-            operating-system: [ubuntu-20.04]
-            php-version: ['7.4', '8.0', '8.1']
+            operating-system: [ubuntu-latest]
+            php-version: ['7.4', '8.0', '8.1', '8.2', '8.3', '8.4', '8.5']
             
       name: Testing PHP ${{ matrix.php-version }} on ${{ matrix.operating-system }}
       
       steps:
-         - uses: shivammathur/setup-php@master
+         - uses: shivammathur/setup-php@v2
            with:
                php-version: ${{ matrix.php-version }}
                extensions: gd,intl,mbstring,sqlite,zip
                coverage: pcov
                
-         - uses: actions/checkout@v3
+         - uses: actions/checkout@v6
          
          - run: composer validate
 
          - run: composer install --no-progress
          
-         - run: vendor/bin/phpunit --coverage-clover=tests/coverage.xml
+         - run: composer webtrees-mod-maj-geodata-france:coverage
 
-         - uses: codecov/codecov-action@v3
+         - name: Upload coverage report to Codecov
+           uses: codecov/codecov-action@v5
            with:
-              file: tests/coverage.xml
+              token: ${{ secrets.CODECOV_TOKEN }}
+              report_type: coverage
+              files: tests/coverage.xml
               flags: unittests
+
+         - name: Upload test results to Codecov
+           if: ${{ !cancelled() }}
+           uses: codecov/codecov-action@v5
+           with:
+              token: ${{ secrets.CODECOV_TOKEN }}
+              report_type: test_results
+              files: tests/junit.xml

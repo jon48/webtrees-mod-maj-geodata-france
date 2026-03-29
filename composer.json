@@ -27,7 +27,8 @@
             "fisharebest/webtrees": "source"
         },
 		"allow-plugins": {
-			"composer/package-versions-deprecated": true
+			"composer/package-versions-deprecated": true,
+			"bamarni/composer-bin-plugin": true
 		}
 	},
 	"autoload" : {
@@ -43,21 +44,26 @@
 	"require" : {
 		"jon48/webtrees-lib" : "dev-main-2.1 as dev-main",
 		"fisharebest/webtrees" : "~2.1.8",
-		"league/flysystem" : "~2.0"
+		"league/flysystem" : "~2.0",
+		"league/commonmark": "2.8.2 as 2.8.0"
 	},
 	"require-dev" : {
-		"phpstan/phpstan-deprecation-rules" : "^1.0",
-		"phpstan/phpstan-phpunit" : "^1.0",
-		"phpstan/phpstan-strict-rules" : "^1.0",
+		"bamarni/composer-bin-plugin": "^1.8",
 		"phpunit/phpunit": "@stable"
 	},
 	"scripts" : {
-		"webtrees-mod-maj-geodata-france:phpcs" : "phpcs -s",
-		"webtrees-mod-maj-geodata-france:phpcbf" : "phpcbf",
-		"webtrees-mod-maj-geodata-france:phpstan" : "phpstan analyze",
-		"webtrees-mod-maj-geodata-france:psalm" : "psalm"
+		"webtrees-mod-maj-geodata-france:phpcs" : "./vendor-bin/php-cs/vendor/bin/phpcs -s --exclude=Generic.Files.LineEndings",
+		"webtrees-mod-maj-geodata-france:phpcbf" : "./vendor-bin/php-cs/vendor/bin/phpcbf --exclude=Generic.Files.LineEndings",
+		"webtrees-mod-maj-geodata-france:phpstan" : "./vendor-bin/phpstan/vendor/bin/phpstan analyze --no-progress",
+		"webtrees-mod-maj-geodata-france:psalm" : "psalm",
+        "webtrees-mod-maj-geodata-france:test": "./vendor/bin/phpunit",
+        "webtrees-mod-maj-geodata-france:coverage": "./vendor/bin/phpunit --coverage-clover=tests/coverage.xml --coverage-html=tests/coverage --log-junit=tests/junit.xml"
 	},
 	"extra" : {
-		"installer-name" : "myartjaub_geodata_france"
+		"installer-name" : "myartjaub_geodata_france",
+		"bamarni-bin": {
+            "bin-links": false,
+			"forward-command": true
+        }
 	}
 }

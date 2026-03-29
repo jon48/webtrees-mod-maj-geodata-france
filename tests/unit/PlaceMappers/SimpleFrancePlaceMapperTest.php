@@ -38,9 +38,7 @@ class SimpleFrancePlaceMapperTest extends TestCase
     protected Tree $tree;
     protected SimpleFrancePlaceMapper $simple_france_place_mapper;
 
-    /**
-     * {@inheritdoc}
-     */
+    #[\Override]
     protected function setUp(): void
     {
         parent::setUp();
@@ -52,9 +50,7 @@ class SimpleFrancePlaceMapperTest extends TestCase
         Registry::cache($cache_factory);
     }
 
-    /**
-     * {@inheritdoc}
-     */
+    #[\Override]
     protected function tearDown(): void
     {
         parent::tearDown();
