@@ -6,7 +6,7 @@
  * @package MyArtJaub\Webtrees
  * @subpackage GeoDispersion
  * @author Jonathan Jaubart <dev@jaubart.com>
- * @copyright Copyright (c) 2021-2024, Jonathan Jaubart
+ * @copyright Copyright (c) 2021-2026, Jonathan Jaubart
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3
  */
 
@@ -76,13 +76,20 @@ class SimpleFrancePlaceMapper implements PlaceMapperInterface
      * @var array<string, string>
      */
     private const MAPPINGS_KNOWN_COMMUNES_VARIATIONS = [
-        'Sarrus (Fridefont)'                            =>  'Fridefont',
-        'Magnac (Fridefont)'                            =>  'Fridefont',
-        'Mallet (Fridefont)'                            =>  'Fridefont',
-        'Le Bacon (Les Monts-Verts)'                    =>  'Les Monts-Verts',
-        'Arcomie (Les Monts-Verts)'                     =>  'Les Monts-Verts',
-        'Anterrieux (Saint-Juéry)'                      =>  'Saint-Juéry',
-        'Saint-Chély-Forain (Saint-Chély-d\'Apcher)'    =>  'Saint-Chély-d\'Apcher',
+        'Canac (Campagnac)'                                 =>  'Campagnac',
+        'Épercieux (Épercieux-Saint-Paul)'                  =>  'Épercieux-Saint-Paul',
+        'Saint-Paul-d\'Épercieux (Épercieux-Saint-Paul)'    =>  'Épercieux-Saint-Paul',
+        'Sarrus (Fridefont)'                                =>  'Fridefont',
+        'Magnac (Fridefont)'                                =>  'Fridefont',
+        'Mallet (Fridefont)'                                =>  'Fridefont',
+        'L\'Aubépin (Larajasse)'                            =>  'Larajasse',
+        'La Chapelle-en-Vaudragon (La Chapelle-sur-Coise)'  =>  'La Chapelle-sur-Coise',
+        'Vaudragon (La Chapelle-sur-Coise)'                 =>  'La Chapelle-sur-Coise',
+        'Le Bacon (Les Monts-Verts)'                        =>  'Les Monts-Verts',
+        'Arcomie (Les Monts-Verts)'                         =>  'Les Monts-Verts',
+        'Meylieu-Montrond (Montrond-les-Bains)'             =>  'Montrond-les-Bains',
+        'Anterrieux (Saint-Juéry)'                          =>  'Saint-Juéry',
+        'Saint-Chély-Forain (Saint-Chély-d\'Apcher)'        =>  'Saint-Chély-d\'Apcher',
     ];
 
     /**
